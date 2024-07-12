@@ -31,7 +31,7 @@ main {
 }
 .menu-sidebar {
   display: flex;
-  width: 200px;
+  /* width: 310px; */
   flex-direction: column;
   align-items: center;
   background: linear-gradient(
@@ -40,6 +40,8 @@ main {
     rgba(255, 255, 255, 0.349)
   );
   padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -84,24 +86,22 @@ main {
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex: 1;
-  padding: 20px;
+  /* padding: 20px; */
+  margin-top: 20px;
+  margin-left: 20px;
 }
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: black;
+.content-title {
+  width: 100%;
+  text-align: center;
+  /* background-color: #006994; */
 }
 
 .card {
-  height: 180px;
-  width: 200px;
+  /* height: 180px; */
+
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
@@ -113,7 +113,6 @@ main {
   );
   border: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 20px;
-  margin-right: 5px;
   text-align: center;
 }
 
@@ -127,37 +126,77 @@ main {
   color: #fff;
 }
 
-.card-details,
-.details {
+.basic-data,
+.payroll-data {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.titles,
-.title-values {
+.basic-data-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex;
+  /* align-items: stretch; */
+  /* background-color: orange; */
+}
+.name,
+.department,
+.payroll-date,
+.bank-account,
+.id-number,
+.payroll-period,.deductions {
+  width: 190px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
+  /* padding: 10px; */
+}
+
+.name-value,
+.id-number-value,
+.department-value,
+.payroll-period-value,
+.payroll-date-value,
+.bank-account-value,.deductions-value {
+  margin-left: 5px;
+  color: #006994;
+}
+
+.client {
+  width: 330px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: start;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
 }
 
-#payroll-basic-data {
-  width: 300px;
+.gross-amount,
+.net-amount {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 10px;
 }
-#payroll-amount-data {
-  width: 600px;
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 10px;
 }
-
-.client-name,
-#amount,
-#total {
-  text-align: right;
+.gross-amount-value,
+.net-amount-value,
+.total-value {
+  margin-left: 5px;
+  color: #006994;
 }
-
-.active {
-  background-color: #006994;
-  color: #fff;
+.client-value {
+  color: #006994;
+  margin-left: 5px;
 }
