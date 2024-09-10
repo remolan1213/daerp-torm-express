@@ -22,7 +22,7 @@ main {
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.3)
   );
-  border-radius: 16px;
+  border-radius: 7px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -42,8 +42,8 @@ main {
   padding-top: 30px;
   padding-left: 10px;
   padding-right: 10px;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -102,7 +102,7 @@ main {
 .card {
   /* height: 180px; */
 
-  border-radius: 16px;
+  border-radius: 7px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -121,8 +121,8 @@ main {
   width: 100%;
   line-height: 30px;
   background: #006994;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   color: #fff;
 }
 
