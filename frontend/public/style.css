@@ -54,33 +54,39 @@ main {
   width: 180px;
   margin-bottom: 20px;
 }
-.menu-sidebar ul {
+
+
+.menu {
   list-style: none;
-  margin: 0;
-  padding: 0;
   width: 100%;
 }
-.menu-sidebar li {
-  margin-bottom: 10px;
+
+.menu-item {
+  padding-left: 35px;
+  width: 100%;
 }
-.menu-sidebar a {
-  display: flex;
-  /* padding-left: 50px; */
-  justify-content: center;
-  color: #333;
+
+.menu-item a {
   text-decoration: none;
-}
-.menu-sidebar li:hover {
-  background-color: #006994;
-}
-
-.menu-sidebar a:hover {
-  color: #fff;
-  font-size: 1.5rem;
+  color: #000000;
+  font-size: .9rem;
+  transition: 0.3s;
+  width: 100%;
 }
 
-.menu-sidebar a:active {
-  background-color: #006994;
+.menu-item.active, .menu-item:hover {
+  padding-left: 40px;
+  background-color: #495057;
+  border-left: 5px solid #17a2b8;
+}
+.menu-item:hover a {
+  color:white;
+}
+
+
+.menu-item i {
+  width: 20px;
+  height: 20px;
 }
 
 .content {
@@ -89,19 +95,18 @@ main {
   align-items: flex-start;
   justify-content: flex-start;
   flex: 1;
-  /* padding: 20px; */
+  font-size: .9rem;
   margin-top: 20px;
   margin-left: 20px;
 }
 .content-title {
+  color: #006994;
   width: 100%;
   text-align: center;
-  /* background-color: #006994; */
 }
 
 .card {
-  /* height: 180px; */
-
+  color: #006994;
   border-radius: 7px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
@@ -112,7 +117,8 @@ main {
     rgba(255, 255, 255, 0.3)
   );
   border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
   text-align: center;
 }
 
@@ -127,32 +133,44 @@ main {
 }
 
 .basic-data,
-.payroll-data {
+.payroll-data,.deductions-data{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+.basic-data,.payroll-data,.total-data{
+  background-color: azure;
+}
 .basic-data-2 {
   display: flex;
   flex-direction: row;
   justify-content: flex;
-  /* align-items: stretch; */
-  /* background-color: orange; */
 }
 .name,
 .department,
 .payroll-date,
 .bank-account,
 .id-number,
-.payroll-period,.deductions {
-  width: 190px;
+.payroll-period {
+  
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   margin: 10px;
-  /* padding: 10px; */
+}
+
+.name,.department{
+  width: 220px;
+}
+
+.id-number,.payroll-period{
+  width: 150px;
+}
+.bank-account,.payroll-date{
+  width: 159px;
 }
 
 .name-value,
@@ -160,9 +178,9 @@ main {
 .department-value,
 .payroll-period-value,
 .payroll-date-value,
-.bank-account-value,.deductions-value {
+.bank-account-value,.deductions-value, .description {
   margin-left: 5px;
-  color: #006994;
+  color: #000000;
 }
 
 .client {
@@ -174,9 +192,18 @@ main {
   margin: 10px;
 }
 
+.deductions{
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
+}
+
 .gross-amount,
-.net-amount {
-  width: 120px;
+.net-amount, .deduction-amount{
+  width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -194,9 +221,10 @@ main {
 .net-amount-value,
 .total-value {
   margin-left: 5px;
-  color: #006994;
+  color: #000000;
 }
 .client-value {
-  color: #006994;
+  color: #000000;
   margin-left: 5px;
 }
+

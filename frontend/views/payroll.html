@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <title>DreamArchers ERP</title>
 </head>
 
@@ -14,12 +15,24 @@
     <section class="glass">
       <div class="menu-sidebar">
         <img class="logo" src="da-logo4.svg" alt="logo" />
-        <ul>
-          <li><a href="home">Home</a></li>
-          <li><a href="profile">Profile</a></li>
-          <li><a href="payroll">Payroll</a></li>
-          <li><a href="settings">Settings</a></li>
-        </ul>
+ 
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="home"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="profile"><i class="fas fa-chart-bar"></i> Profile</a>
+          </li>
+          <li class="menu-item">
+            <a href="payroll"><i class="fas fa-users"></i> Payroll</a>
+          </li>
+          <li class="menu-item">
+            <a href="settings"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+          <li class="menu-item">
+            <a href="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </li>
+        </ul>        
       </div>
       <div class="content">
         <div class="content-title">
@@ -31,16 +44,17 @@
           <div class="basic-data">
             <div class="name">
               Name:
-              <div class="name-value">Jake Gaviola</div>
+              <div class="name-value">Mezha Pereyra</div>
             </div>
             <div class="id-number">
               ID Number:
-              <div class="id-number-value">2020-0105-005</div>
+              <div class="id-number-value">12345678</div>
             </div>
             <div class="bank-account">Bank Account:
-              <div class="bank-account-value">AUB 3270-11-00114-7</div>
+              <div class="bank-account-value">AUB 916-10-522679-5</div>
             </div>
           </div><!-- .basic-data -->
+          
           <div class="basic-data-2">
             <div class="department">
               Department:
@@ -48,39 +62,50 @@
             </div>
             <div class="payroll-period">
               Payroll Period:
-              <div class="payroll-period-value">June 1-30, 2024</div>
+              <div class="payroll-period-value">September 1-30, 2024</div>
             </div>
             <div class="payroll-date">
               Payroll Date:
-              <div class="payroll-date-value">July 14, 2024</div>
+              <div class="payroll-date-value">October 9, 2024</div>
             </div>
           </div><!-- .basic-data -2-->
+          
           <div class="payroll-data">
             <div class="client">Client:
-              <div class="client-value">Graphics Design Work</div>
+              
               <div class="client-value">Waterfront Media LCC</div>
+              <!-- <div class="client-value">Graphics Design Work</div> -->
+              <div class="client-value">Health Care</div> 
             </div>
             <div class="gross-amount">Gross:
-              <div class="gross-amount-value">P13,922.43</div>
-              <div class="gross-amount-value">P37,163.39</div>
+              <div class="gross-amount-value">P35,466.24</div>
+              <!-- <div class="gross-amount-value">P13,386.22</div> -->
             </div>
 
             <div class="net-amount">Net:
-              <div class="net-amount-value">P696.12</div>
-              <div class="net-amount-value">P1,858.17</div>
+              <div class="net-amount-value">P17,733.12</div>
+              <div class="net-amount-value">P1,939.56</div>
             </div>
           </div><!-- .payroll-data -->
-          <div class="deductions">Deductions:
-            <div class="deductions-value">P00.00</div>
-          </div>          
-          <div class="total">
-            Total:
-            <div class="total-value">P2,554.29</div>
-          </div> 
+          
+          <div class="deductions-data">
+            <div class="deductions">Deductions:  
+              <div class="description">None</div>
+            </div>
+            <div class="deduction-amount">Amount:
+              <div class="deductions-value">P00.00</div>
+            </div>
+          </div>   <!-- .deductions-data -->
+          <div class="total-data">    
+            <div class="total">
+             Total:
+              <div class="total-value">P19,672.68</div>
+            </div> 
+          </div><!-- .total-data -->
         </div><!-- .content -->
     </section><!-- .glass -->
   </main>
-  <script src="active.js"></script>
+  <script src="./../js/menu.js"></script>
 </body>
 
 </html>
