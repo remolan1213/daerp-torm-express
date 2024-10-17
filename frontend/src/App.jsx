@@ -7,6 +7,7 @@ import Payroll from './components/Payroll'; // Adjust the path if necessary
 import Settings from './components/Settings'; // Adjust the path if necessary
 import Dataentry from './components/Dataentry';
 import './style.css'; // Adjust the path if necessary for your styles
+import './index.css';
 
 const App = () => {
     return (

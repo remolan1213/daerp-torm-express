@@ -56,7 +56,8 @@ const Dataentry = () => {
       .then((data) => {
         console.log("Success:", data);
         setSuccessMessage("Payroll data submitted successfully!");
-        setFormData({ // Reset form data
+        setFormData({
+          // Reset form data
           name: "",
           idNumber: "",
           bankAccount: "",
@@ -192,7 +193,7 @@ const Dataentry = () => {
               onChange={handleInputChange}
             />
           </div>
-          <button type="submit">Submit Payroll</button>
+          <button type="submit" className="bg-red-600 text-white rounded py-1 px-2 hover:bg-red-500 my-5" >Submit Payroll</button>
         </form>
 
         {/* Success/Error Messages */}
