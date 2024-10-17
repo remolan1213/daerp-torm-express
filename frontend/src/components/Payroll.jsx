@@ -4,7 +4,7 @@ import "../style.css"; // Assuming the path to your CSS is correct
 const Payroll = () => {
   // Define the state to hold payroll data
   const [payrollData, setPayrollData] = useState({
-    name: "Jake Gaviola",
+    name: "Armando Lanugon ",
     idNumber: "2020-0105-005",
     bankAccount: "AUB 327-011-000114-7",
     department: "Graphics",

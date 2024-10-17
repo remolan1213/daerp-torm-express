@@ -17,6 +17,9 @@ const Dataentry = () => {
     totalAmount: "",
   });
 
+  const [successMessage, setSuccessMessage] = useState(""); // For feedback message
+  const [errorMessage, setErrorMessage] = useState(""); // For error feedback
+
   // Handle input changes to update state
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -30,7 +33,13 @@ const Dataentry = () => {
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission behavior
 
-    // Send data to backend using fetch API (or axios)
+    // Validation: Ensure required fields are filled
+    if (!formData.name || !formData.idNumber) {
+      setErrorMessage("Name and ID Number are required!");
+      return;
+    }
+
+    // Send data to backend using fetch API
     fetch("/api/payroll", {
       method: "POST",
       headers: {
@@ -38,13 +47,34 @@ const Dataentry = () => {
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((data) => {
         console.log("Success:", data);
-        // Optionally reset the form or handle success notification here
+        setSuccessMessage("Payroll data submitted successfully!");
+        setFormData({ // Reset form data
+          name: "",
+          idNumber: "",
+          bankAccount: "",
+          department: "",
+          payrollPeriod: "",
+          payrollDate: "",
+          client: "",
+          grossAmount: "",
+          netAmount: "",
+          deductions: "",
+          deductionAmount: "",
+          totalAmount: "",
+        });
+        setErrorMessage(""); // Clear any previous error messages
       })
       .catch((error) => {
         console.error("Error:", error);
+        setErrorMessage("There was an error submitting the payroll data.");
       });
   };
 
@@ -53,6 +83,7 @@ const Dataentry = () => {
       <div className="card-title-bar">Data Entry</div>
       <div className="basic-data">
         <form className="payroll-form" onSubmit={handleSubmit}>
+          {/* Form Fields */}
           <div className="form-group">
             <label>Name:</label>
             <input
@@ -163,6 +194,10 @@ const Dataentry = () => {
           </div>
           <button type="submit">Submit Payroll</button>
         </form>
+
+        {/* Success/Error Messages */}
+        {successMessage && <p className="success-message">{successMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </div>
     </div>
   );
